@@ -19,4 +19,10 @@ fn values() {
     println!("{}", x);
     x = 20;
     println!("{}", x);
+    constants();
+}
+
+fn constants() {
+    const MAX_POINTS: u32 = 100_000;    
+    println!("{}", MAX_POINTS);
 }

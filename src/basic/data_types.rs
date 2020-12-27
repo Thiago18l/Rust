@@ -12,6 +12,10 @@ fn main() {
     boolean();
     char_type();
     tuple_type();
+    arrays();
+    expressions();
+    let result = multiplication(2, 4);
+    println!("result: {}", result);
 }
 
 fn integers() {
@@ -68,4 +72,31 @@ fn tuple_type() {
     println!("The value of y is: {}", y);
     println!("The value of x is: {}", x);
     println!("The value of z is: {}", z);
+
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+    let five_hundred = x.0;
+    let six_point_four = x.1;
+
+    println!("{}, {}", five_hundred, six_point_four);
+}
+
+fn arrays() {
+    let arr = [1, 2, 3, 4, 5, 6, 7];
+    println!("first element: {}, second element: {}", arr[0], arr[1]);
+}
+
+// functions
+
+fn multiplication(x: i32, y: i32) -> i32 {
+    return x * y;
+}
+
+fn expressions() {
+    let x = 5;
+
+    let y = {
+        let x = 3;
+        x + 1
+    };
+    println!("Y: {}", y);
 }
